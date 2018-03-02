@@ -18,7 +18,7 @@ if (x_n == 0) {
 };
 var x_ss = document['getElementsByTagName']('script');
 for (i = 0; i < x_ss['length']; i++) {
-    if (x_ss[i]['src'] == 'http://designer4.me/peter/chat-head.js') {
+    if (x_ss[i]['src'] == 'https://github.com/wejdaneblogger/master/blob/master/imad.js') {
         x_ss[i]['replaceWith']('')
     }
 }
