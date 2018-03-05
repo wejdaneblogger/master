@@ -4062,7 +4062,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
     margin-left: -1px
 }
 .nav {
-    padding-left: 0;
+    padding-right: 15px;
     margin-bottom: 0;
     list-style: none
 }
@@ -4266,7 +4266,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 @media (min-width:768px) {
     .navbar-header {
-        float: left
+        float: right
     }
 }
 .navbar-collapse {
@@ -4443,7 +4443,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 @media (min-width:768px) {
     .navbar-nav {
-        float: left;
+        float: right;
         margin: 0
     }
     .navbar-nav > li {
@@ -4575,8 +4575,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
         float: left!important
     }
     .navbar-right {
-        float: right!important;
-        margin-right: -15px
+        float: left!important;
+        margin-left: -15px
     }
     .navbar-right ~ .navbar-right {
         margin-right: 0
