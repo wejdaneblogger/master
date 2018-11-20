@@ -1,0 +1,11 @@
+$(function(){var t=$("#items-news .item-name"),e=t.text(),i=e.split("/"),a=i[0],o=i[1]
+$.ajax({type:"GET",url:"/feeds/posts/default/-/"+a+"?alt=json-in-script&max-results="+o,dataType:"jsonp",success:function(e){for(var i="",a="",o=0;o<e.feed.entry.length;o++){for(var n=0;n<e.feed.entry[o].link.length;n++)if("alternate"==e.feed.entry[o].link[n].rel){var r=e.feed.entry[o].link[n].href
+break}var s=e.feed.entry[o].title.$t,c=600,d=" ",l=" "
+l=l.replace("/s72-c/","/s"+c+"/")
+for(var h=" ",p=(e.feed.entry[o].author[0].name.$t,e.feed.entry[o].published.$t),f=[1,2,3,4,5,6,7,8,9,10,11,12],u=["يناير","فبراير","مارس","أبريل","مايو","يونيو"," يوليو"," أغسطس","سبتمبر","أكتوبر","نوفمبر"," ديسمبر"],b=p.split("-")[2].substring(0,2),g=p.split("-")[1],y=p.split("-")[0],m=0;m<f.length;m++)if(parseInt(g)==f[m]){g=u[m]
+break}p=b+" "+g+" "+y
+try{l=e.feed.entry[o].media$thumbnail.url.replace("s72-c","w360-h209").replace("default","hqdefault")}catch(w){l="http://4.bp.blogspot.com/-OI0BoYP677M/VZu1TW7a3DI/AAAAAAAAFsE/4BRdE2YFS5A/s1600/noimg.png"}try{h=e.feed.entry[o].category[0].term}catch(v){h="uncategorized"}try{d=e.feed.entry[o].author[0].gd$image.src}catch(w){d="http://3.bp.blogspot.com/-fgwrcZWeRrU/V26tvNcGtsI/AAAAAAAAAG4/lGwGnQDZsNY7bAPr8hVorZruD-jHHxxOgCLcB/s50/anonyme.png"}var A=e.feed.entry[o].content.$t.replace(/<.+?>/g,"").substring(0,100)+"[…]"
+a+='<div class="col-md-4 col-sm-6 col-xs-6 post-height"><div class="post"><a href="'+r+'"><div class="img"><img style="width:100%;height:100%" src="'+l+'" alt="'+s+'"></div></a><div class="text"><a href="'+r+'"><h3>'+s+"</h3></a><p>"+A+'</p><span class="text-name">'+p+"</span></div></div></div>"}a+="",i+=a
+var k=$(".copyright a").attr("href")
+"http://www.abdoutech.com"==k?t.html(i):t.html('<div id="copyremove"><h1>من فضلك ارجع الحقوق لكي يعمل لك القالب بشكل جيد</h1></div>'),setInterval(function(){$(".copyright:visible").length||(window.location.href="http://www.abdoutech.com")},3e3),setInterval(function(){$(".copyright a:visible").length||(window.location.href="http://www.abdoutech.com")},3e3),$(".copyright").each(function(){var t='تصميم وتطوير بواسطة <a alt="Abdou tech" href="http://www.abdoutech.com" target="_blank" >Abdou Tech</a>'
+$(this).html(t),setInterval(function(){$(".copyright:visible").length||(window.location.href="http://www.abdoutech.com")},3e3)})}})})
